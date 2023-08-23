@@ -9,10 +9,14 @@ package umg.fabricadesillas;
  * @author josesalazar
  */
 public class Silla {
-    
+    //declaracion de variables
+
     private String TipoMaterial;
     private String Color;
     private String Estilo;
+    
+    
+    //declaracion de GET y SET
 
     public String getTipoMaterial() {
         return TipoMaterial;
@@ -37,5 +41,5 @@ public class Silla {
     public void setEstilo(String Estilo) {
         this.Estilo = Estilo;
     }
-    
+
 }
