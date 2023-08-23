@@ -13,5 +13,29 @@ public class Silla {
     private String TipoMaterial;
     private String Color;
     private String Estilo;
+
+    public String getTipoMaterial() {
+        return TipoMaterial;
+    }
+
+    public void setTipoMaterial(String TipoMaterial) {
+        this.TipoMaterial = TipoMaterial;
+    }
+
+    public String getColor() {
+        return Color;
+    }
+
+    public void setColor(String Color) {
+        this.Color = Color;
+    }
+
+    public String getEstilo() {
+        return Estilo;
+    }
+
+    public void setEstilo(String Estilo) {
+        this.Estilo = Estilo;
+    }
     
 }
