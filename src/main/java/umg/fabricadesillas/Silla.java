@@ -3,8 +3,10 @@ package umg.fabricadesillas;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 public class Silla {
+
     private String TipoMaterial;
     private String Color;
     private String Estilo;
@@ -13,6 +15,10 @@ public class Silla {
         this.TipoMaterial = TipoMaterial;
         this.Color = Color;
         this.Estilo = Estilo;
+    }
+
+    Silla() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public String getTipoMaterial() {
@@ -48,7 +54,7 @@ public class Silla {
             System.out.println("La silla ha sido fabricada con éxito.");
 
             // Guardar los detalles de la silla en un archivo
-            guardarSillaEnArchivo("SillasFabricadas.txt");
+            guardarSillaEnArchivo();
         } else {
             System.out.println("No hay suficientes materiales para fabricar la silla.");
         }
@@ -63,15 +69,15 @@ public class Silla {
             System.out.println("La silla ha sido armada con éxito.");
 
             // Guardar los detalles de la silla en un archivo
-            guardarSillaEnArchivo("SillasArmadas.txt");
+            guardarSillaEnArchivo();
         } else {
             System.out.println("No hay suficientes materiales para armar la silla.");
         }
     }
 
-    private void guardarSillaEnArchivo(String nombreArchivo) {
-        try (FileWriter archivo = new FileWriter(nombreArchivo, true);
-             PrintWriter escritor = new PrintWriter(archivo)) {
+    void guardarSillaEnArchivo() {
+        String InventarioSilla = null;
+        try (FileWriter archivo = new FileWriter(InventarioSilla, true); PrintWriter escritor = new PrintWriter(archivo)) {
             // Escribir los detalles de la silla en el archivo.
             escritor.println("Tipo de material: " + TipoMaterial);
             escritor.println("Color: " + Color);
@@ -84,12 +90,53 @@ public class Silla {
     }
 
     private boolean verificarInventario(Materiales inventario) {
-    // Obtener la cantidad de material necesario para fabricar o armar la silla
-    int cantidadMaterialNecesario = 1; // Puedes ajustar esta cantidad según tus necesidades
+        // Obtener la cantidad de material necesario para fabricar o armar la silla
+        int cantidadMaterialNecesario = 1; // Puedes ajustar esta cantidad según tus necesidades
 
-    // Verificar si hay suficiente disponibilidad en el inventario
-    if (inventario.getDisponibilidad() >= cantidadMaterialNecesario) {
-        return true; // Hay suficientes materiales en el inventario
-    } else {
-        return false; // No hay suficientes materiales en el inventario
-    }}}
+        // Verificar si hay suficiente disponibilidad en el inventario
+        if (inventario.getDisponibilidad() >= cantidadMaterialNecesario) {
+            return true; // Hay suficientes materiales en el inventario
+        } else {
+            return false; // No hay suficientes materiales en el inventario
+        }
+    }
+     public void mostrarMenu(Materiales inventario) {
+        Scanner scanner = new Scanner(System.in);
+        int opcion;
+
+        do {
+            System.out.println("Menú de Silla");
+            System.out.println("1. Fabricar Silla");
+            System.out.println("2. Armar Silla");
+            System.out.println("3. Salir");
+            System.out.print("Selecciona una opción: ");
+            opcion = scanner.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    FabricarSilla(inventario);
+                    break;
+                case 2:
+                    ArmarSilla(inventario);
+                    break;
+                case 3:
+                    System.out.println("¡Hasta luego!");
+                    break;
+                default:
+                    System.out.println("Opción inválida. Por favor, selecciona una opción válida.");
+            }
+        } while (opcion != 3);
+    }
+
+    public static void main(String[] args) {
+        // Crea una instancia de Materiales (debes proporcionar los valores correctos)
+        Materiales inventario = new Materiales("MaterialPrueba", 100.0, 10);
+
+        Silla silla = new Silla("Madera", "Café", "Clásico");
+        silla.mostrarMenu(inventario);
+    }
+
+    void mostrarMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+}

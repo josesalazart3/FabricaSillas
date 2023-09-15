@@ -5,21 +5,24 @@ package umg.fabricadesillas;
 
 import java.util.Scanner;
 import umg.fabricadesillas.Materiales;
+import umg.fabricadesillas.Silla;
 
 /**
  *
  * @author josesalazar
  */
 public class FabricaDeSillas {
-
+    
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         FabricaDeSillas fabrica = new FabricaDeSillas();
         Materiales dato2 = new Materiales();
+        Pedido dato3 = new Pedido();
+        Silla dato1 = new Silla();
 
         //Materiales mate = new Materiales();
         int opcion;
-
+        
         do {
             System.out.println("Menú Principal");
             System.out.println("1. Fabricar Silla");
@@ -28,19 +31,18 @@ public class FabricaDeSillas {
             System.out.println("4. Salir");
             System.out.print("Selecciona una opción: ");
             opcion = scanner.nextInt();
-
+            
             switch (opcion) {
                 case 1:
-                   // Lógica para fabricar una silla
+                    dato1.mostrarMenu();
                     break;
                 case 2:
                     dato2.comprarMateriales();
-    
-    
-    
-    break;
-
+                    
+                    break;
+                
                 case 3:
+                    dato3.menuPedido(dato2, dato1);
                     
                     break;
                 case 4:

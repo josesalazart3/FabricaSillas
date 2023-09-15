@@ -17,6 +17,10 @@ public class Materiales {
         this.disponibilidad = disponibilidad;
     }
 
+    Materiales() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public void menuGestionMateriales() {
         Scanner scanner = new Scanner(System.in);
 
@@ -187,6 +191,10 @@ public class Materiales {
     }
 
     int getDisponibilidad() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    boolean verificarInventario() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
