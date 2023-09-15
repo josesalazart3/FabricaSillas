@@ -31,17 +31,17 @@ public class FabricaDeSillas {
 
             switch (opcion) {
                 case 1:
-                    // Lógica para fabricar una silla
+                   // Lógica para fabricar una silla
                     break;
                 case 2:
                     dato2.comprarMateriales();
     
     
-    // Puedes agregar más lógica de administración de inventario aquí si es necesario
+    
     break;
 
                 case 3:
-                    // Lógica para gestionar pedidos
+                    
                     break;
                 case 4:
                     System.out.println("¡Hasta luego!");
