@@ -1,10 +1,10 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package umg.fabricadesillas;
 
 import java.util.Scanner;
+import umg.fabricadesillas.Materiales;
 
 /**
  *
@@ -15,7 +15,9 @@ public class FabricaDeSillas {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         FabricaDeSillas fabrica = new FabricaDeSillas();
+        Materiales dato2 = new Materiales();
 
+        //Materiales mate = new Materiales();
         int opcion;
 
         do {
@@ -32,8 +34,12 @@ public class FabricaDeSillas {
                     // Lógica para fabricar una silla
                     break;
                 case 2:
-                    // Lógica para administrar inventario
-                    break;
+                    dato2.comprarMateriales();
+    
+    
+    // Puedes agregar más lógica de administración de inventario aquí si es necesario
+    break;
+
                 case 3:
                     // Lógica para gestionar pedidos
                     break;
