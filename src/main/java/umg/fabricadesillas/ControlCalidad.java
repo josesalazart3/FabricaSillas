@@ -11,7 +11,7 @@ package umg.fabricadesillas;
 public class ControlCalidad implements InterfaceControlCalidad {
     public boolean validarSilla(Silla silla) {
         
-        return true; // Aquí, se asume que la silla es válida.
+        return true; 
     }
 
     public void verificarSilla(Silla silla) {

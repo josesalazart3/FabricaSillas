@@ -20,7 +20,7 @@ public class FabricaDeSillas {
         Pedido dato3 = new Pedido();
         Silla dato1 = new Silla();
 
-        //Materiales mate = new Materiales();
+       
         int opcion;
         
         do {

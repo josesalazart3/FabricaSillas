@@ -11,6 +11,14 @@ public class Materiales {
     private double precioPorUnidad;
     private int disponibilidad;
 
+    public int getDisponibilidad() {
+        return this.disponibilidad;
+    }
+
+    public boolean verificarInventario() {
+        return this.disponibilidad > 0;
+    }
+
     public Materiales(String nombre, double precioPorUnidad, int disponibilidad) {
         this.nombre = nombre;
         this.precioPorUnidad = precioPorUnidad;
@@ -18,7 +26,8 @@ public class Materiales {
     }
 
     Materiales() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        //sthrow new UnsupportedOperationException("Not supported yet."); 
+        // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public void menuGestionMateriales() {
@@ -188,14 +197,6 @@ public class Materiales {
             System.err.println("Error al registrar la separación en el archivo.");
             e.printStackTrace();
         }
-    }
-
-    int getDisponibilidad() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    boolean verificarInventario() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

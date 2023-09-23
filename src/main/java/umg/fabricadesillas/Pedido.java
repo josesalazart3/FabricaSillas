@@ -12,16 +12,13 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
 
 /**
  *
  * @author josesalazar
  */
-import java.util.Date;
-import java.util.List;
-import java.util.Scanner;
-import umg.fabricadesillas.Materiales;
-import umg.fabricadesillas.Silla;
 
 public class Pedido {
 
@@ -119,7 +116,7 @@ public class Pedido {
             while (scanner.hasNextLine()) {
                 String linea = scanner.nextLine();
 
-                // Supongamos que cada línea contiene la información de una silla en el formato "TipoSilla,Existencias"
+                
                 String[] partes = linea.split(",");
 
                 if (partes.length == 2) {
